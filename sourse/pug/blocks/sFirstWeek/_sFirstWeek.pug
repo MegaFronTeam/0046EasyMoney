@@ -1,0 +1,21 @@
+mixin sFirstWeek(data)
+	// start sFirstWeek
+	+b.SECTION.sFirstWeek.section#sFirstWeek&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Вот так зарабатывают ученики в первую неделю, #[span сразу после уроков:]
+			+defSlider()
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-4' data-src='img/sFirstWeek-img-1.png'): +img('img/sFirstWeek-img-1.png').res-i
+			+e.footer
+				h6 У них получилось. И у Вас тоже получится
+				h4 Циклический трейдинг – это самый простой и понятный способ заработка в трейдинге
+				+e.btn.btn.btn-base(href='#')
+					| Жмите здесь, чтобы запустить циклический источник дохода
+					span
+	// end sFirstWeek

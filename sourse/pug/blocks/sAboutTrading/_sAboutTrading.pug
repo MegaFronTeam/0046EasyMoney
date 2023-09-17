@@ -1,0 +1,32 @@
+mixin sAboutTrading(data)
+	// start sAboutTrading
+	+b.SECTION.sAboutTrading.section#sAboutTrading&attributes(attributes)
+		.container
+			+b.section-title
+				h2.h1 Что такое циклический трейдинг?
+			+e.row.row
+				.col-lg-auto
+					+e.title.h6 Если простыми словами: Вы&nbsp;открываете сделки по&nbsp;расписанию, в&nbsp;одно и&nbsp;то&nbsp;же время, раз в&nbsp;неделю (или раз в&nbsp;месяц).
+				.col-lg
+					+e.text-wrap
+						p Больше никаких премудростей. Вы&nbsp;зарабатываете на&nbsp;рыночных циклах, которые повторяются с&nbsp;высокой точностью. Сами циклы мы&nbsp;уже рассчитали за&nbsp;Вас
+						+img('img/sAboutTrading-img-1.png')
+			h4 Вот так это приносит деньги
+			+defSlider('Сделки по&nbsp;акциям Сбербанка, раз в&nbsp;месяц, в&nbsp;одни и&nbsp;те&nbsp;же даты:')
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-1.png'): +img('img/sAboutTrading-slider-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-2.png'): +img('img/sAboutTrading-slider-img-2.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-3.png'): +img('img/sAboutTrading-slider-img-3.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-4.png'): +img('img/sAboutTrading-slider-img-4.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-5.png'): +img('img/sAboutTrading-slider-img-5.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-6.png'): +img('img/sAboutTrading-slider-img-6.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-1' data-src='img/sAboutTrading-slider-img-7.png'): +img('img/sAboutTrading-slider-img-7.png').res-i
+			+defSlider('Сделки по&nbsp;валютной паре EUR/USD, раз в&nbsp;неделю, по&nbsp;пятницам, в&nbsp;одно и&nbsp;то&nbsp;же время:')
+				+e.slide.swiper-slide(data-fancybox='gallery-2' data-src='img/sAboutTrading-slider-img-8.png'): +img('img/sAboutTrading-slider-img-8.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-2' data-src='img/sAboutTrading-slider-img-8.png'): +img('img/sAboutTrading-slider-img-8.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-2' data-src='img/sAboutTrading-slider-img-8.png'): +img('img/sAboutTrading-slider-img-8.png').res-i
+			+e.footer
+				h6 Хотите зарабатывать также, по будильнику?
+				+e.btn.btn.btn-primary.btn-base
+					| Жмите здесь, чтобы получить бесплатный доступ
+					span
+	// end sAboutTrading

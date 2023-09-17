@@ -1,0 +1,23 @@
+mixin sInstantAccess(data)
+	// start sInstantAccess
+	+b.SECTION.sInstantAccess.section#sInstantAccess&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Моментальный доступ к обучению. #[span Бесплатно!]
+			+defSlider()
+				+e.slide.swiper-slide(data-fancybox='gallery-3' data-src='img/sInstantAccess-img-1.png'): +img('img/sInstantAccess-img-1.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-3' data-src='img/sInstantAccess-img-2.png'): +img('img/sInstantAccess-img-2.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-3' data-src='img/sInstantAccess-img-3.png'): +img('img/sInstantAccess-img-3.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-3' data-src='img/sInstantAccess-img-4.png'): +img('img/sInstantAccess-img-4.png').res-i
+				+e.slide.swiper-slide(data-fancybox='gallery-3' data-src='img/sInstantAccess-img-5.png'): +img('img/sInstantAccess-img-5.png').res-i
+			+e.footer
+				h6 Успейте зарегистрироваться до&nbsp;истечения таймера и&nbsp;получите ПОДАРОК&nbsp;&mdash; билет на&nbsp;ближайший прямой эфир с&nbsp;Владимиром Чаминым
+				+e.timer-box.timer-box.timer-box-js-2
+					span.days 12
+					span.hours 20
+					span.minutes 20 
+					span.seconds 20
+				+e.btn.btn.btn-primary.btn-base
+					| Успейте получить бесплатно!
+					span
+	// end sInstantAccess

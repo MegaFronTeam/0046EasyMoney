@@ -1,0 +1,21 @@
+mixin sBanner(headline, title, titleSpan, btn, bg, img='sBanner-img-1.png', list=['Мы&nbsp;покажем, почему и&nbsp;как циклический трейдинг приносит деньги.', 'Вы&nbsp;получите надежную стратегию, которая приносит прибыль десятилетиями.', 'И&nbsp;Вы&nbsp;сразу сможете применить это на&nbsp;практике&nbsp;&mdash; без дополнительных тренировок и&nbsp;дополнительного &laquo;платного&raquo; обучения.'], subtitle)
+	// start sBanner
+	+b.SECTION.sBanner.section&attributes(attributes)
+		.container
+			+e.wrap
+				if bg
+					+img('img/svg/sBanner-bg-1.svg').bg
+				if headline
+					+e.headline!= headline
+				h4!= title
+					span!= titleSpan
+				if subtitle
+					+e.subtitle!= subtitle
+				ul
+					each item in list 
+						li!= item
+				+e.btn.btn.btn-base 
+					!= btn
+					span
+				+img(`img/${img}`).img
+	// end sBanner

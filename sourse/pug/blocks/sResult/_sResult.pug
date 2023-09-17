@@ -1,0 +1,22 @@
+mixin sResult(data)
+	// start sResult
+	+b.SECTION.sResult.section#sResult&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Какой конкретно результат Вы получите сразу после уроков:
+			+e.row.row
+				mixin item(icon, title, span, content)
+					.col-sm-6.col-lg-4
+						+e.item
+							+e.icon-wrap
+								+img('img/svg/sResult-img.svg').circle
+								+img(`img/svg/${icon}`).img
+							h4!= title
+							p
+								span!= span 
+								| 
+								!= content
+				+item('sResult-icon-1.svg', 'Я – новичок', 'Просто и&nbsp;быстро создадите источник дохода.', 'Никаких сложных методов и&nbsp;головоломок. С&nbsp;этим видом трейдинга справится даже школьник.')
+				+item('sResult-icon-2.svg', 'Я – трейдер', 'Сможете зарабатывать комфортнее и&nbsp;стабильнее.', 'Получите мечту&nbsp;&mdash; точно знать, когда и&nbsp;во&nbsp;сколько цена актива начнет расти или падать.')
+				+item('sResult-icon-3.svg', 'Я – инвестор', 'Сможете забирать больше прибыли и&nbsp;в&nbsp;разы снижать просадку при падении рынка.', 'Создавайте портфель с&nbsp;учетом рыночных циклов')
+	// end sResult

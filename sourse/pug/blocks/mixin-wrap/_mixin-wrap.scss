@@ -111,3 +111,200 @@
 	width: auto;
 	margin-right: rem(32);
 }
+
+.timer-box {
+	display: flex;
+
+	// padding-bottom: rem(50);
+	// @include media-breakpoint-up(lg){
+	// 	padding-bottom: 0;
+	// }
+	span{
+		position: relative;
+		font-size: rem(16);
+		width: rem(40);
+		height: rem(40);
+		background-color: $purple;
+		border-radius: rem(12);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 700;
+		color: #fff;
+		line-height: 1.2;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+
+			width: rem(48);
+			height: rem(48);
+			font-size: rem(20);
+		}
+		@include media-breakpoint-up(md) {
+
+			margin-right: rem(7);
+		}
+		margin-right: rem(7);
+		&:last-child{
+			margin-right: 0 !important;
+		}
+		&:first-child {
+			@include media-breakpoint-up(md) {
+				margin-right: rem(6);
+			}
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			right: -10px;
+			width: rem(12);
+			text-align: center;
+			top: 0;
+			height: 100%;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			background-image: url("data:image/svg+xml,%3Csvg width='3' height='12' viewBox='0 0 3 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1.5' cy='1.5' r='1.5' fill='white'/%3E%3Ccircle cx='1.5' cy='10.5' r='1.5' fill='white'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-size: 3px 12px;
+			background-position: center;
+		}
+
+		&:last-child:before, &:first-child:before{
+			content: none;
+		}
+	}
+}
+
+.btn-base {
+	--bs-btn-padding-x: #{rem(12)};
+	--bs-btn-padding-y: #{rem(13.6)};
+	--bs-btn-font-weight: 500;
+	--bs-btn-line-height: 1.3;
+	--bs-btn-font-size: #{rem(14)};
+	--bs-btn-color: #fff;
+	--bs-btn-border-radius: 12px;
+	--bs-btn-color: #{$purple};
+
+	// --bs-btn-hover-color: #fff;
+	// --bs-btn-active-color: #fff;
+	// --bs-btn-hover-bg: #{$purple};
+	// --bs-btn-active-bg: #{$purple};
+	
+	--bs-btn-hover-color: #{$purple};
+	--bs-btn-active-color: #{$purple};
+	background-image: linear-gradient(180deg, #9CE90B 0%, #6EA305 100%);
+
+	box-shadow: 0px 4px 0px 0px #6285BA !important;
+	transform: translateY(0);
+	border: none;
+	@include mt;
+	width: 100%;
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		--bs-btn-font-size: #{rem(16)};
+	}
+	&:hover {
+		box-shadow: none !important;
+		transform: translateY(4px);
+		span {
+			opacity: 0;
+		}
+	}
+	span {
+		@include mt;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(91deg, #1CEFF4 0.2%, #D695FF 101.67%);
+		opacity: 1;
+		left: 0;
+		top: 0;
+	}
+	// @media (min-width: 1200px) {
+	// 	--bs-btn-font-size: #{rem(24)};
+	// }
+}
+
+h2 {
+	@include media-breakpoint-down(md) {
+		font-size: rem(30);
+	}
+}
+
+h3 {
+	@include media-breakpoint-down(md) {
+		font-size: rem(26);
+	}
+}
+h4 {
+	@include media-breakpoint-down(md) {
+		font-size: rem(24);
+	}
+}
+h5 {
+	@include media-breakpoint-down(md) {
+		font-size: rem(18);
+	}
+}
+h6 {
+	@include media-breakpoint-down(md) {
+		font-size: rem(16);
+	}
+}
+
+p, li {
+	@include media-breakpoint-down(sm) {
+		font-size: rem(14);
+	}
+}
+
+.def-slider {
+	padding: rem(20);
+	border-radius: 12px;
+	background-color: #FAFAFC;
+	box-shadow: 0px 4px 49px 0px rgba(0, 0, 0, 0.13), 0px 4px 16px 0px rgba(93, 55, 152, 0.12);
+	@include media-breakpoint-up(lg) {
+		padding: rem(40) rem(87) rem(35.200) rem(87);
+	}
+	h6 {
+		text-align: center;
+		line-height: 1.2;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+	}
+	&__slider {
+		padding-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(60);
+		}
+		.swiper-pagination {
+			--swiper-pagination-bottom: 0;
+	
+			&-bullet {
+				width: rem(8);
+				height: rem(8);
+				background-color: $gray-200;
+				--swiper-pagination-bullet-horizontal-gap: #{rem(6)};
+				@include media-breakpoint-up(lg) {
+					width: rem(12);
+					height: rem(12);
+
+					--swiper-pagination-bullet-horizontal-gap: #{rem(12)};
+				}
+				&-active {
+					background-color: $primary;
+				}
+			}
+		}
+	}
+	&__slide {
+		text-align: center;
+		cursor: pointer;
+	}
+}

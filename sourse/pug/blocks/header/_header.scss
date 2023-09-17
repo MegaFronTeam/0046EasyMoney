@@ -1,7 +1,10 @@
 
-	// start .header
-	.header {
-		 
+// start .header
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

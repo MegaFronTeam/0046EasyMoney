@@ -65,7 +65,7 @@ $color-mode-type:             data ; // `data` or `media-query`
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #EFEFEF !default;
-$gray-200: #e9ecef !default;
+$gray-200: #eee !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
@@ -688,11 +688,11 @@ $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                rem(60) !default;
-$h2-font-size:                rem(60) !default;
-$h3-font-size:                rem(40) !default;
+$h2-font-size:                rem(40) !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                rem(32) !default;
 $h5-font-size:                rem(24) !default;
-$h6-font-size:                $font-size-base !default;
+$h6-font-size:                rem(20) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
