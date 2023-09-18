@@ -380,7 +380,7 @@ class JSCCommon {
 
 		//let targetDate = new Date(now.getFullYear(), now.getMonth(), d, h, m, s);
 		//force date
-		let targetDate = new Date(now.getFullYear(), now.getMonth(),now.getDate(), now.getHours() + 11 );
+		let targetDate = new Date(now.getFullYear(), now.getMonth(),now.getDate() + 1, now.getHours() );
 
 
 		//interval
