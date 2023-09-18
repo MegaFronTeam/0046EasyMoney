@@ -35,6 +35,14 @@ function eventHandler() {
 		});
 	}
 
+	$('[data-bs-toggle="tooltip"]').tooltip({
+		animation: true,
+		html: true
+	});
+
+	// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
