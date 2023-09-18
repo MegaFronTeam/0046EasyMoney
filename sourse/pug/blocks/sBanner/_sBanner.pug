@@ -14,7 +14,7 @@ mixin sBanner(headline, title, titleSpan, btn, bg, img='sBanner-img-1.png', list
 				ul
 					each item in list 
 						li!= item
-				+e.btn.btn.btn-base 
+				+e.btn.btn.btn-base.btn-primary
 					!= btn
 					span
 				+img(`img/${img}`).img
