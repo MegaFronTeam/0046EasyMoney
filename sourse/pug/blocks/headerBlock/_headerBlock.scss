@@ -1,7 +1,7 @@
 // start .headerBlock
 .headerBlock {
 	--sPT: #{rem(50)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(20)};
 	// --sTPB: #{rem()}; 
 	// min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
@@ -40,9 +40,8 @@
 	&__col {
 		display: flex;
 		flex-direction: column;
-		@media screen and (min-width: 600px) {
-			justify-content: center;
-		}
+		justify-content: center;
+		height: 100%;
 	}
 	&__img-col {
 		@media screen and (max-width: 600px) {
@@ -83,10 +82,10 @@
 	}
 	&__person-text {
 		margin-bottom: rem(18);
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 576px) {
 			display: none;
 		}
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 576px) {
 			position: absolute;
 			max-width: rem(123);
 			// text-align: right;
@@ -120,12 +119,12 @@
 	}
 	&__img {
 		width: 100%;
-		@media screen and (max-width: 600px) {
+		@include media-breakpoint-down(sm) {
 			position: absolute;
-			top: 160px;
-			right: -100px;
-			max-width: rem(260);	
-			transform: translateX(0);
+			right: -20px;
+			max-width: rem(197);	
+			top: calc(50% - -8px);
+			transform: translateY(-50%);
 			.headerBlock__person-text {
 				display: none !important;
 			}
@@ -186,6 +185,8 @@
 		list-style-type: none;
 		margin-bottom: rem(18);
 		max-width: rem(208);
+		position: relative;
+    z-index: 10;
 		@include media-breakpoint-up(sm) {
 			max-width: rem(350);
 		}
@@ -219,7 +220,7 @@
 		}
 	}
 	&__btn {
-		max-width: rem(220);
+		// max-width: rem(220);
 		@include media-breakpoint-up(sm) {
 			max-width: rem(292);
 		}
