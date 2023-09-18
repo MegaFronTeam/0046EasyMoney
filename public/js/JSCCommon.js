@@ -426,7 +426,7 @@ class JSCCommon {
 		// this.mobileMenu();
 		// this.inputMask();
 		// this.sendForm();
-		// this.heightwindow();
+		this.heightwindow();
 		// this.makeDDGroup();
 		// this.disabledBtn();
 		this.setScreen();

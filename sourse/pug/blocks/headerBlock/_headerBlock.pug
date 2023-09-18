@@ -3,8 +3,8 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.container.container
 			//- img(src="img/header-bg.png", alt="").bg
-			.row
-				.col-lg-7
+			+e.row.row
+				+e.col.col-lg-7
 					h1 Легкие деньги на&nbsp;циклическом трейдинге
 					+e.subtitle Самый простой и понятный способ зарабатывать деньги в трейдинге
 					p Зарегистрируйтесь прямо сейчас и получите:
@@ -13,11 +13,11 @@ mixin headerBlock()
 						li простую торговую стратегию,
 						li инструкцию для старта с&nbsp;нуля.
 					+e.btn-row.row 
-						.col-auto
+						.col-lg-auto
 							+e.btn.btn.btn-primary.btn-base
 								| Успейте получить бесплатно!
 								span
-						.col-auto
+						.col-lg-auto
 							+e.timer-wrap
 								+e.timer-box.timer-box.timer-box-js
 									span.days 12
@@ -25,7 +25,7 @@ mixin headerBlock()
 									span.minutes 20 
 									span.seconds 20
 					+e.text Успейте до&nbsp;истечения таймера и&nbsp;получите ПОДАРОК&nbsp;&mdash; билет на&nbsp;ближайший прямой эфир с&nbsp;Владимиром Чаминым
-				.col-lg-5
+				+e.img-col.col-lg-5
 					+e.img
 						+img('img/headerBlock-bg-1-sm.png')
 						+e.person-text
