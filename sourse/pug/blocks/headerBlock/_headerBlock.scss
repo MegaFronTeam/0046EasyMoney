@@ -82,12 +82,19 @@
 		}
 	}
 	&__person-text {
-		position: absolute;
-		max-width: rem(123);
-		// text-align: right;
-		bottom: 3%;
-    left: 50%;
-		transform: translateX(-50%);
+		margin-bottom: rem(18);
+		@media screen and (min-width: 600px) {
+			display: none;
+		}
+		@media screen and (min-width: 600px) {
+			position: absolute;
+			max-width: rem(123);
+			// text-align: right;
+			bottom: 3%;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 0;
+		}
 		@include media-breakpoint-up(lg) {
 			bottom: 66%;
 			left: 27%;
@@ -99,17 +106,12 @@
 		.iconC {
 			position: relative;
 			z-index: 10;
-			@media screen and (min-width: 600px) {
-				margin-bottom: rem(8);
-			}
+			margin-bottom: rem(8);
 		}
 		p {
 			font-weight: 500;
 			line-height: 1.2;
-			margin-bottom: 0 !important;
-			@media screen and (min-width: 600px) {
-				margin-bottom: 3px !important;
-			}
+			margin-bottom: 3px !important;
 		}
 		span {
 			font-size: rem(13);
@@ -119,12 +121,16 @@
 	&__img {
 		width: 100%;
 		@media screen and (max-width: 600px) {
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: auto;
-			max-width: rem(260);
+			position: absolute;
+			top: 160px;
+			right: -100px;
+			max-width: rem(260);	
+			transform: translateX(0);
+			.headerBlock__person-text {
+				display: none !important;
+			}
 		}
-		@media screen and (min-width: 600px) {
+		@include media-breakpoint-up(sm) {
 			display: block;
 			position: absolute;
 			bottom: rem(-20);
@@ -179,7 +185,10 @@
 	ul {
 		list-style-type: none;
 		margin-bottom: rem(18);
-		max-width: rem(350);
+		max-width: rem(208);
+		@include media-breakpoint-up(sm) {
+			max-width: rem(350);
+		}
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(32);
 		}
@@ -210,7 +219,10 @@
 		}
 	}
 	&__btn {
-		max-width: rem(292);
+		max-width: rem(220);
+		@include media-breakpoint-up(sm) {
+			max-width: rem(292);
+		}
 		@include media-breakpoint-up(xl) {
 			--bs-btn-padding-x: #{rem(24)};
 		}
@@ -240,6 +252,8 @@
 		}
 	}
 	&__text {
+		position: relative;
+		z-index: 10;
 		max-width: rem(298);
 		font-size: rem(13);
 		line-height: 1.4;
