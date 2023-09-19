@@ -1,0 +1,45 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sAboutTrading/_sAboutTrading.pug
+include ../blocks/sFirstMoney/_sFirstMoney.pug
+include ../blocks/sResult/_sResult.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sPoints/_sPoints.pug
+include ../blocks/sWhatYouGet/_sWhatYouGet.pug
+include ../blocks/sInstantAccess/_sInstantAccess.pug
+include ../blocks/sAuthor/_sAuthor.pug
+include ../blocks/sFirstWeek/_sFirstWeek.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+	- let btn = ` <strong>за 4 990 ₽</strong> `
+block title
+	- let  title= 'Легкие деньги'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+headerBlock(btn)
+		+sAboutTrading(btn)
+		+sFirstMoney
+		+sResult
+		+sBanner('Хватит искать, в чем подвох!', 'Вы точно получите рабочий способ ', 'заработка — абсолютно бесплатно', `Получите ${btn} бесплатный  доступ сейчас`, 'true')
+		+sPoints
+		+sWhatYouGet
+		+sBanner('', 'Успейте получить доступ к урокам, пока не закончился таймер, и&nbsp;получите ', 'ПОДАРОК:', `Получить  ${btn}  доступ к урокам и забрать подарок`, false, 'sBanner-img-2.png', ['Как находить прибыльные циклы на&nbsp;любых инструментах в&nbsp;два клика мышки?', 'Как поставить циклический трейдинг на&nbsp;автомат?', 'Доступ к&nbsp;торговым стратегиям, которые удвоили депозит за&nbsp;полгода.'], 'Билет на ближайший прямой эфир с Владимиром Чаминым:').sBanner--second
+		+sInstantAccess(btn)
+		+sAuthor
+		+sFirstWeek
+	+parts('footer')
+      
+
+
+

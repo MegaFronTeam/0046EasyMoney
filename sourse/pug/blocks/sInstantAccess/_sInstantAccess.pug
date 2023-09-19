@@ -1,4 +1,4 @@
-mixin sInstantAccess(data)
+mixin sInstantAccess(btn='')
 	// start sInstantAccess
 	+b.SECTION.sInstantAccess.section#sInstantAccess&attributes(attributes)
 		.container
@@ -17,7 +17,6 @@ mixin sInstantAccess(data)
 					span.hours 20
 					span.minutes 20 
 					span.seconds 20
-				+e.btn.btn.btn-primary.btn-base
-					| Успейте получить бесплатно!
+				+e.btn.btn.btn-primary.btn-base(href="#")!=`Успейте получить ${btn} бесплатно!` 
 					span
 	// end sInstantAccess

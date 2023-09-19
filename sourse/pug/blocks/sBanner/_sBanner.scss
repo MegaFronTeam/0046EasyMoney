@@ -99,7 +99,9 @@
 		}
 	}
 	&__btn {
-		max-width: rem(324);
+		// max-width: rem(394);
+		max-width: 100%;
+		width: auto;
 	}
 	&__subtitle {
 		font-weight: 700;
@@ -112,7 +114,7 @@
 	&--second {
 		.sBanner{
 			&__btn {
-				max-width: rem(383);
+				// max-width: rem(480);
 			}
 		}
 		.img {

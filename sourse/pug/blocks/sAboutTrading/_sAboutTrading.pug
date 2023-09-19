@@ -1,4 +1,4 @@
-mixin sAboutTrading(data)
+mixin sAboutTrading(btn='')
 	// start sAboutTrading
 	+b.SECTION.sAboutTrading.section#sAboutTrading&attributes(attributes)
 		.container
@@ -26,7 +26,6 @@ mixin sAboutTrading(data)
 				+e.slide.swiper-slide(data-fancybox='gallery-2' data-src='img/sAboutTrading-slider-img-8.png'): +img('img/sAboutTrading-slider-img-8.png').res-i
 			+e.footer
 				h6 Хотите зарабатывать также, по будильнику?
-				+e.btn.btn.btn-primary.btn-base
-					| Жмите здесь, чтобы получить бесплатный доступ
+				+e.btn.btn.btn-primary.btn-base(href="#")!= `Жмите здесь, чтобы получить  ${btn}  бесплатный доступ`
 					span
 	// end sAboutTrading

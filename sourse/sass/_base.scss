@@ -558,3 +558,17 @@ iframe {
 		max-width: rem(450);
 	}
 }
+
+
+.btn-primary{
+	// --bs-btn-hover-bg: #620D98;
+	// --bs-btn-hover-border-color: #620D98;
+	background: linear-gradient(-91deg, #1CEFF4 0.2%, #D695FF 101.67%);
+	strong{
+		color: #1CEFF4;
+		font-weight: 500;
+		text-decoration: line-through;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+}

@@ -1,4 +1,4 @@
-mixin headerBlock()
+mixin headerBlock(btn='')
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.container.container
@@ -19,8 +19,7 @@ mixin headerBlock()
 						span Автор онлайн-курса
 					+e.btn-row.row 
 						.col-lg-auto
-							+e.btn.btn.btn-primary.btn-base
-								| Успейте получить бесплатно!
+							+e.btn.btn.btn-primary.btn-base(href="#")!=`Успейте получить ${btn} бесплатно!`
 								span
 						.col-lg-auto
 							+e.timer-wrap
