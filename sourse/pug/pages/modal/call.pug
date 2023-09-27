@@ -1,8 +1,20 @@
 include ../../layout/include.pug
 
 +b.modal-win
-	+form-wrap 
-		+e.title Нужна помощь в&nbsp;выборе ASIC-майнера?
-		p.after-headline Оставьте свой телефон и&nbsp;мы&nbsp;перезвоним в&nbsp;ближайшее время
-		+input("Телефон",'tel')(required)  
-		+e.BUTTON.btn.btn(type="submit"  ).btn-primary.w-100 Заказать звонок
+	.ld_progressbar
+		.progress-bar.active(style='width: 50%;')
+	.row
+		.col.d-none.d-lg-block
+			+e.img-wrap
+				+img('img/sAuthor-img-2.png')
+		.col-lg-auto
+			+e.content
+				+e.headline Поздравляем! Вы можете получить доступ бесплатно
+				iframe#ic_sform_13588841707818844_iframe(src='//www.infoclub.info/subscribe_forms/index/163/117e3a80?rid=13588841707818844&loc=https%3A%2F%2Fstart.infoclub.info%2Fcryptostart%2F&ref=' name='ic_sform_13588841707818844_iframe' scrolling='no' frameborder='0' allowtransparency='true' marginwidth='0' marginheight='0' vspace='0' hspace='0' height='undefined' width='100%' onload="window['SForm_163'].registerFrame(this)" style='max-width: 600px;' <='' iframe='')
+				+e.timer-wrap
+					+e.timer-box.timer-box.timer-box-js-3
+						span.days 12
+						span.hours 20
+						span.minutes 20 
+						span.seconds 20
+					+e.description * — успейте до истечения таймера и получите БЕСПЛАТНЫЙ билет на ближайший вебинар Евгения Стрижа

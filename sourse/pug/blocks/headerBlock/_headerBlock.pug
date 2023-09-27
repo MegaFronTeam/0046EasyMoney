@@ -19,7 +19,7 @@ mixin headerBlock(btn='')
 						span Автор онлайн-курса
 					+e.btn-row.row 
 						.col-lg-auto
-							+e.btn.btn.btn-primary.btn-base(href="#")!=`Успейте получить ${btn} бесплатно!`
+							+e.btn.btn.btn-primary.btn-base(data-fancybox='modal-1' data-type="ajax" href="modal/call.html")!=`Успейте получить ${btn} бесплатно!`
 								span
 						.col-lg-auto
 							+e.timer-wrap

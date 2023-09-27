@@ -17,6 +17,6 @@ mixin sInstantAccess(btn='')
 					span.hours 20
 					span.minutes 20 
 					span.seconds 20
-				+e.btn.btn.btn-primary.btn-base(href="#")!=`Успейте получить ${btn} бесплатно!` 
+				+e.btn.btn.btn-primary.btn-base(data-fancybox=`modal-${btn}-6` data-type="ajax" href="modal/call.html")!=`Успейте получить ${btn} бесплатно!` 
 					span
 	// end sInstantAccess

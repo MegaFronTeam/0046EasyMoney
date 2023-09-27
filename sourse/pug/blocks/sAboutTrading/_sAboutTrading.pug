@@ -26,6 +26,6 @@ mixin sAboutTrading(btn='')
 				+e.slide.swiper-slide(data-fancybox='gallery-2' data-src='img/sAboutTrading-slider-img-8.png'): +img('img/sAboutTrading-slider-img-8.png').res-i
 			+e.footer
 				h6 Хотите зарабатывать также, по будильнику?
-				+e.btn.btn.btn-primary.btn-base(href="#")!= `Жмите здесь, чтобы получить  ${btn}  бесплатный доступ`
+				+e.btn.btn.btn-primary.btn-base(data-fancybox='modal-2' data-type="ajax" href="modal/call.html")!= `Жмите здесь, чтобы получить  ${btn}  бесплатный доступ`
 					span
 	// end sAboutTrading

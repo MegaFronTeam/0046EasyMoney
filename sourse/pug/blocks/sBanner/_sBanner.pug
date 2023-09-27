@@ -14,7 +14,7 @@ mixin sBanner(headline, title, titleSpan, btn, bg, img='sBanner-img-1.png', list
 				ul
 					each item in list 
 						li!= item
-				+e.btn.btn.btn-base.btn-primary(href="#")
+				+e.btn.btn.btn-base.btn-primary(data-fancybox=`modal-${btn}-1` data-type="ajax" href="modal/call.html")
 					!= btn
 					span
 				+img(`img/${img}`).img
